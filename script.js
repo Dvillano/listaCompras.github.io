@@ -14,7 +14,7 @@ productos = productos.map(element => {
 //Creamos lista de productos
 productos.forEach( unItem => {
     let li = document.createElement("li");
-    li.textContent = unItem.nombre 
+    li.textContent = unItem.nombre + " " + unItem.precio + "$";
     listaProductos.appendChild(li);
     li.className = "li-item";
 })
