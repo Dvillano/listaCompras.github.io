@@ -6,7 +6,7 @@ let btnCompra = document.getElementById("btnCompra");
 //Cambiar la primera letra de cada producto a mayuscula
 productos = productos.map(element => {
     return {
-        nombre: element.nombre.charAt(0).toUpperCase() + element.nombre.slice(1),
+        nombre: element.nombre.charAt(0).toUpperCase() + element.nombre.slice(1), 
         precio: element.precio
     }
 });
@@ -14,7 +14,7 @@ productos = productos.map(element => {
 //Creamos lista de productos
 productos.forEach( unItem => {
     let li = document.createElement("li");
-    li.textContent = unItem.nombre + " " + unItem.precio + "$";
+    li.textContent = unItem.nombre + " - " + unItem.precio + "$";
     listaProductos.appendChild(li);
     li.className = "li-item";
 })
@@ -25,13 +25,14 @@ let listItem = document.querySelectorAll(".li-item");
 //Agregamos cada producto al carrito al clickear en el
 listItem.forEach( element => {
     element.addEventListener("click", () => {
-        carrito.push(element.innerHTML);
+        carrito.push(element.innerHTML.split(" - ")[0]);
         element.remove();
 
         //Creamos lista de compras cada vez que se clickea un producto.
         let li = document.createElement("li");
         li.textContent = element.innerHTML
         listaCompras.appendChild(li);
+        li.className = "li-item";
     })
 })
 

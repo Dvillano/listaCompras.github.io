@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #7eca9c;
+    background-color: #1c1427;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    margin: 0
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.productos {
+    text-align: center;
+    margin: 10px 0 ;
+}
+
+.productos:hover {
+    cursor: pointer;
+}
+
+.compras {
+    text-align: center;
+    margin: 10px;
+}
+
+.contenedor-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btnCompra {
+    border-radius: 5px;
+    background-color: #40394a;
+    border: 1px solid black;
+    color: white;
+    width: 100px;
+    padding: 10px;
+    margin: 0;
+    cursor: pointer;
+}
+
+
+.li-item {
+    text-align: center;
+    border-radius: 5px;
+    margin: 1px;
+
+    padding:0.35em 1.2em;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.2s;
+}
+
+.li-item:hover{
+    color:#000000;
+    background-color:#FFFFFF;
+    }
